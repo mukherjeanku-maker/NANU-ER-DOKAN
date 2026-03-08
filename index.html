@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Store - Fresh Groceries</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Config for Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#16a34a', // Green-600
+                            darkGreen: '#14532d', // Green-900
+                            orange: '#f97316', // Orange-500
+                            lightOrange: '#ffedd5', // Orange-100
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50">
+
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-md transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-brand-green flex items-center gap-2">
+                <i class="fa-solid fa-leaf"></i> Laxmi Store
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-brand-orange transition">Home</a>
+                <a href="#about" class="hover:text-brand-orange transition">About Us</a>
+                <a href="#products" class="hover:text-brand-orange transition">Products</a>
+                <a href="#contact" class="hover:text-brand-orange transition">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-green focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col space-y-4 shadow-lg">
+            <a href="#home" class="block hover:text-brand-orange">Home</a>
+            <a href="#about" class="block hover:text-brand-orange">About Us</a>
+            <a href="#products" class="block hover:text-brand-orange">Products</a>
+            <a href="#contact" class="block hover:text-brand-orange">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-lightOrange overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-green/10 text-brand-green text-sm font-semibold mb-4">
+                Welcome to Laxmi Store
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Fresh Groceries at <br> <span class="text-brand-green">Your Doorstep</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Quality products, daily essentials, and the best prices in Subarnapur. We bring the market to you.
+            </p>
+            <a href="#products" class="inline-block bg-brand-orange text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-xl transition transform hover:-translate-y-1">
+                Shop Now
+            </a>
+        </div>
+        
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 left-0 -ml-20 -mt-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">About Laxmi Store</h2>
+            <div class="w-16 h-1 bg-brand-orange mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                We are dedicated to providing the community with the freshest produce and daily necessities. 
+                Located in the heart of <strong>Beharia, Subarnapur, Haringhata</strong>, we pride ourselves on customer service and quality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Our Categories</h2>
+                <p class="text-gray-500 mt-2">Everything you need for your kitchen</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=400" alt="Daily Essentials" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <i class="fa-solid fa-basket-shopping text-3xl text-brand-green mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Daily Essentials</h3>
+                        <p class="text-sm text-gray-500">Oil, Salt, Spices & More</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=400" alt="Rice & Grains" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <i class="fa-solid fa-wheat-awn text-3xl text-brand-green mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Rice & Grains</h3>
+                        <p class="text-sm text-gray-500">Premium Rice, Pulses & Flour</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621939514649-28b12e81658b?auto=format&fit=crop&q=80&w=400" alt="Snacks & Beverages" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <i class="fa-solid fa-cookie-bite text-3xl text-brand-green mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Snacks & Beverages</h3>
+                        <p class="text-sm text-gray-500">Tea, Coffee, Biscuits & Chips</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=400" alt="Personal Care" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <i class="fa-solid fa-pump-soap text-3xl text-brand-green mb-3"></i>
+                        <h3 class="text-xl font-bold mb-2">Personal Care</h3>
+                        <p class="text-sm text-gray-500">Soaps, Shampoos & Hygiene</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-brand-green text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold">Contact Us</h2>
+                <p class="text-green-100 mt-2">Visit us or get in touch</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Address -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <i class="fa-solid fa-location-dot text-3xl mb-4 text-brand-orange"></i>
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p class="text-green-50">Beharia, Subarnapur,<br>Haringhata, Nadia, 741249</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <i class="fa-solid fa-phone text-3xl mb-4 text-brand-orange"></i>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="text-green-50">7908978561</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <i class="fa-solid fa-envelope text-3xl mb-4 text-brand-orange"></i>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-green-50">mukherjeanku@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-white">Laxmi Store</span>
+                <p class="text-sm mt-1">&copy; 2023 All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-brand-orange transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-brand-orange transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-brand-orange transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917908978561" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-110 animate-bounce">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
